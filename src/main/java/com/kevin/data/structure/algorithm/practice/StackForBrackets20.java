@@ -1,4 +1,4 @@
-package com.kevin.DataStructureAlgorithm.application;
+package com.kevin.data.structure.algorithm.practice;
 
 import com.google.common.collect.Maps;
 
@@ -18,7 +18,7 @@ import java.util.Stack;
  * @date 2021/2/9 22:48
  * @since 1.0.0
  */
-public class StackForBrackets {
+public class StackForBrackets20 {
 
 
     private static Map<Character, Character> CHAR_MAP = null;
@@ -33,7 +33,7 @@ public class StackForBrackets {
 
     public static void main(String[] args) {
         String str = "{[][]()}{{{}}}}";
-        System.out.println(StackForBrackets.isValid(str));
+        System.out.println(StackForBrackets20.isValid(str));
     }
 
     public static Boolean isValid(String str) {

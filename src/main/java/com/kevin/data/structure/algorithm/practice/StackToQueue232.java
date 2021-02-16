@@ -1,4 +1,4 @@
-package com.kevin.DataStructureAlgorithm.application;
+package com.kevin.data.structure.algorithm.practice;
 
 import java.util.Stack;
 
@@ -10,14 +10,14 @@ import java.util.Stack;
  * @date 2021/2/15 19:53
  * @since 1.0.0
  */
-public class MyQueue {
+public class StackToQueue232 {
 
     private static Stack<Integer> input = null;
 
     private static Stack<Integer> output = null;
 
     /** Initialize your data structure here. */
-    public MyQueue() {
+    public StackToQueue232() {
         input = new Stack<Integer>();
         output = new Stack<Integer>();
     }

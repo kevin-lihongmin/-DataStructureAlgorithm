@@ -1,7 +1,5 @@
-package com.kevin.DataStructureAlgorithm.practice;
+package com.kevin.data.structure.algorithm.practice;
 
-
-import java.util.Stack;
 
 /**
  *  单链表反转 Leet Code 206
