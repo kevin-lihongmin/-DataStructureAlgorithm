@@ -29,7 +29,8 @@ public class ShellSort {
         int[] array = new int[]{8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
         System.out.println("排序前：" + JSON.toJSONString(array));
 //        shellChangeSort(array);
-        shellMoveSort(array);
+        shellSort(array);
+//        shellMoveSort(array);
         System.out.println("排序后：" + JSON.toJSONString(array));
     }
 
@@ -86,5 +87,35 @@ public class ShellSort {
         arr[b] = arr[a] - arr[b];
         arr[a] = arr[a] - arr[b];
     }
+
+    /**
+     * 另一种希尔排序写法
+     * @param arr 待排序数组
+     */
+    private static void shellSort(int[] arr) {
+        int len = arr.length;
+        if (len == 1) {
+            return;
+        }
+
+        int step = len / 2;
+        while (step >= 1) {
+            for (int i = step; i < len; i++) {
+                int value = arr[i];
+                int j = i - step;
+                for (; j >= 0; j -= step) {
+                    if (value < arr[j]) {
+                        arr[j + step] = arr[j];
+                    } else {
+                        break;
+                    }
+                }
+                arr[j + step] = value;
+            }
+
+            step = step / 2;
+        }
+    }
+
 
 }
