@@ -29,10 +29,10 @@ public class KthLargest703 {
 
     private int k;
 
-    public KthLargest703(int k, int[] nums) {
+    public KthLargest703(int k, int[] numArray) {
         this.k = k;
         priorityQueue = new PriorityQueue<>(k);
-        for (int num : nums) {
+        for (int num : numArray) {
             add(num);
         }
     }
