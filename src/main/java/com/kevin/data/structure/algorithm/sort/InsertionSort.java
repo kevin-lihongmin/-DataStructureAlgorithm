@@ -1,8 +1,6 @@
 package com.kevin.data.structure.algorithm.sort;
 
-import com.alibaba.fastjson.JSON;
-import com.google.common.base.Stopwatch;
-
+import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -49,9 +47,9 @@ public class InsertionSort {
     public static void main(String[] args) {
         insertionSortVsBubbleSort();
         /*int[] array = new int[]{12, 34, -34, 454, 657, 33, 89, 67, 68, 99, -23, 34};
-        System.out.println("排序前：" + JSON.toJSONString(array));
+        System.out.println("排序前：" + Arrays.toString(array));
         insertionSort(array);
-        System.out.println("排序后：" + JSON.toJSONString(array));*/
+        System.out.println("排序后：" + Arrays.toString(array));*/
     }
 
     /**

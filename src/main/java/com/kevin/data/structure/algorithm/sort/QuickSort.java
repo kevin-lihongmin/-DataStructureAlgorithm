@@ -1,6 +1,6 @@
 package com.kevin.data.structure.algorithm.sort;
 
-import com.alibaba.fastjson.JSON;
+import java.util.Arrays;
 
 /**
  *  快速排序也叫快排， 也是时间复杂度为 O(N*logN)
@@ -15,9 +15,9 @@ public class QuickSort {
 
     public static void main(String[] args) {
         int[] array = new int[]{12, 34, -34, 454, 657, 33, 89, 67, 68, 99, -23, 34};
-        System.out.println("排序前：" + JSON.toJSONString(array));
+        System.out.println("排序前：" + Arrays.toString(array));
         quickSort(array);
-        System.out.println("排序后：" + JSON.toJSONString(array));
+        System.out.println("排序后：" + Arrays.toString(array));
     }
 
     public static void quickSort(int[] array) {
