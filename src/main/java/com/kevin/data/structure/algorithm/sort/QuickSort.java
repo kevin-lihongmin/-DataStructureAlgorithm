@@ -26,7 +26,7 @@ public class QuickSort {
     }
 
 
-    private static void quickSortInternally(int[] array, int left, int right) {
+    public static void quickSortInternally(int[] array, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -54,7 +54,7 @@ public class QuickSort {
         array[i] = array[right];
         array[right] = tmp;
 
-        System.out.println("i = " + i);
+//        System.out.println("i = " + i);
         return i;
     }
 
