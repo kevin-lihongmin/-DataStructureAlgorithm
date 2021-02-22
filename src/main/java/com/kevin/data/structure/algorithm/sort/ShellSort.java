@@ -1,5 +1,7 @@
 package com.kevin.data.structure.algorithm.sort;
 
+import com.alibaba.fastjson.JSON;
+
 /**
  *  希尔排序
  *
@@ -23,11 +25,19 @@ package com.kevin.data.structure.algorithm.sort;
  */
 public class ShellSort {
 
+    public static void main(String[] args) {
+        int[] array = new int[]{8, 9, 1, 7, 2, 3, 5, 4, 6, 0};
+        System.out.println("排序前：" + JSON.toJSONString(array));
+//        shellChangeSort(array);
+        shellMoveSort(array);
+        System.out.println("排序后：" + JSON.toJSONString(array));
+    }
+
     /**
      * 希尔排序 针对有序序列在插入时采用交换法
      * @param arr 待排序数组
      */
-    public static void sort(int[] arr) {
+    public static void shellChangeSort(int[] arr) {
         //增量gap，并逐步缩小增量
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
             // 从第gap个元素，逐个对其所在组进行直接插入排序操作
@@ -46,7 +56,7 @@ public class ShellSort {
      *  希尔排序 针对有序序列在插入时采用移动法
      * @param arr 待排序数组
      */
-    public static void sort2(int[] arr) {
+    public static void shellMoveSort(int[] arr) {
         // 增量gap，并逐步缩小增量
         for (int gap = arr.length / 2; gap > 0; gap /= 2) {
             // 从第gap个元素，逐个对其所在组进行直接插入排序操作
