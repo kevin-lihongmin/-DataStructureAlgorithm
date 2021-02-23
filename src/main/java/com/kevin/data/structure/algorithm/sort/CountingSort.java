@@ -67,7 +67,7 @@ public class CountingSort {
         int[] tmp = new int[array.length];
         for (int i = array.length - 1; i >= 0; i--) {
             // array[最大下标]就是获取原数组中的值，count[原数组中的值]就获取到大概位置上的个数
-            // 比如第一次的下标为 99999 的原始数据为45， 那么就是获取所有值中1-45的个数 46230 为 index
+            // 比如第一次的下标为 99999 的原始数据为45， 那么就是获取所有值中1-45的个数 46230 为 index（数组的下标是从0开始的，所以需要index值需要 - 1）
             int index = count[array[i]] - 1;
             // 将原数组中的值赋值给 tmp[46230]
             tmp[index] = array[i];
