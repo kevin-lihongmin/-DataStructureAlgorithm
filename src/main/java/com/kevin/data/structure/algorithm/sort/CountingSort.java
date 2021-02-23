@@ -5,6 +5,10 @@ import java.util.Random;
 
 /**
  *  计数排序
+ *  计算排序可以理解是特殊的桶排序，对数据的要求更苛刻
+ *  数据要求：数据的范围根据密集，并且范围尽可能的小，比如下面模拟数据十万的数据出现在100的范围内，
+ *           那么计数【桶缩小到1，当前也不用再执行快排了】的平均出现次数是1000.
+ *
  * @author kevin
  * @date 2021/2/22 15:25
  * @since 1.0.0
@@ -12,7 +16,6 @@ import java.util.Random;
 public class CountingSort {
 
     public static void main(String[] args) {
-
         // 创建模拟数据，十万的数据，区间在100 之内， 很可能某个数都出现多次【平均每个位置出现1000次】，所以是计数排序
         int[] array = new int[100000];
         Random random = new Random();
