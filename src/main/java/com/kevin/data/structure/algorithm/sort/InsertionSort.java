@@ -52,30 +52,29 @@ public class InsertionSort {
         System.out.println("排序后：" + Arrays.toString(array));*/
     }
 
-    /**
-     * 插入排序
-     *
-     * @param array
-     */
-    public static void insertionSort(int[] array) {
-        if (array.length < 2) {
-            return;
-        }
-
-        for (int i = 0; i < array.length; i ++) {
-            int value = array[i];
-            int j = i - 1;
-
-            for ( ; j >= 0; j--) {
-                if (array[j] > value) {
-                    array[j + 1] = array[j];
-                } else {
-                    break;
-                }
-            }
-            array[j + 1] = value;
-        }
+/**
+ * 插入排序
+ * @param array 待排序的数组
+ */
+public static void insertionSort(int[] array) {
+    if (array.length < 2) {
+        return;
     }
+
+    for (int i = 0; i < array.length; i ++) {
+        int value = array[i];
+        int j = i - 1;
+
+        for ( ; j >= 0; j--) {
+            if (array[j] > value) {
+                array[j + 1] = array[j];
+            } else {
+                break;
+            }
+        }
+        array[j + 1] = value;
+    }
+}
 
 
 }
