@@ -6,6 +6,8 @@ package com.kevin.data.structure.algorithm.practice.queue;
  *  1、head、tail 指针出队和入队操作
  *  2、判断队列满的条件是 (tail + 1) % n == head ; 判断队空的判断条件是 head == tail;
  *  3、这种情况下回浪费一个数组元素空间
+ *  4、写的关键：存取都是先根据当前的指针作为下标存取数据，在将下标赋值给 下标 + 1，此时可能已经下标越界，取余则回到数组头部，非常巧妙
+ *    （此处，判断下标使用： head = head + 1 == n ? 0 : head; 也是可以的，好理解但是不巧妙）
  *
  * @author kevin
  * @date 2021/2/25 16:41
@@ -49,7 +51,8 @@ public class CircularQueue<T> {
         }
 
         data[tail] = t;
-        tail = (tail + 1) % queueLength;
+//        tail = (tail + 1) % queueLength;
+        tail = tail + 1 == queueLength ? 0 : tail + 1;
 
         return true;
     }
@@ -60,7 +63,8 @@ public class CircularQueue<T> {
         }
 
         T result = (T)data[head];
-        head = (head + 1) % queueLength;
+//        head = (head + 1) % queueLength;
+        head = head + 1 == queueLength ? 0 : head + 1;
 
         return result;
     }
