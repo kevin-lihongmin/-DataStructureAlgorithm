@@ -24,7 +24,7 @@ public class RadixSort {
 
     /**
      * 基数排序
-     * @param array
+     * @param array 待排序数组
      */
     public static void radixSort(long[] array) {
         if (array.length < 2) {
