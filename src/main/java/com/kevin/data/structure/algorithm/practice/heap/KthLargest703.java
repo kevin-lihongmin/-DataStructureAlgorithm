@@ -1,4 +1,4 @@
-package com.kevin.data.structure.algorithm.practice;
+package com.kevin.data.structure.algorithm.practice.heap;
 
 import java.util.PriorityQueue;
 
