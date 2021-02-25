@@ -3,8 +3,13 @@ package com.kevin.data.structure.algorithm.practice;
 import java.util.Stack;
 
 /**
- *  1、LeetCode-232 用栈实现队列
+ *  LeetCode-232 用栈实现队列
  *
+ *  1、使用两个栈（比如叫A、B）
+ *  2、队列是否为空方法：判断两个栈是否都为空
+ *  3、入队方法：将元素依次压入栈A
+ *  4、出队列方法：判断如果栈B为空，则将栈A中的元素全部出栈并压入栈B；否则直接从栈B出栈一个元素
+ *  5、查看方法：处理逻辑与出队方法相同，只是最后返回的是 B栈的peek方法
  *
  * @author kevin
  * @date 2021/2/15 19:53
