@@ -14,6 +14,13 @@ import java.util.Random;
  *  arrayByInsertion length = 100000 排序花费时间为：765
  *  arrayByBubble length = 100000 排序花费时间为：14366
  *
+ *  arrayByInsertion length = 10000 排序花费时间为：17
+ *  arrayByBubble length = 10000 排序花费时间为：155
+ *
+ *                             冒泡排序        插入排序
+ * 一万性能差【9】倍              155           17
+ * 十万性能差【20】倍             765（或1017）  14366（或19166）
+ * 百万耗时太长，我等不到结构
  *
  * @author kevin
  * @date 2021/2/21 23:53
@@ -22,10 +29,11 @@ import java.util.Random;
 public class InsertionSort {
 
     public static void insertionSortVsBubbleSort() {
-        int[] arrayByInsertion = new int[100000];
-        int[] arrayByBubble = new int[100000];
+        int dataLength = 10000;
+        int[] arrayByInsertion = new int[dataLength];
+        int[] arrayByBubble = new int[dataLength];
         Random random = new Random();
-        for (int i = 0; i < 100000; i++) {
+        for (int i = 0; i < dataLength; i++) {
             int value = random.nextInt();
             arrayByInsertion[i] = value;
             arrayByBubble[i] = value;

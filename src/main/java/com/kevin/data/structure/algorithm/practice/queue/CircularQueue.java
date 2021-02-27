@@ -16,9 +16,9 @@ package com.kevin.data.structure.algorithm.practice.queue;
 public class CircularQueue<T> {
 
     /** 队列数据 */
-    private Object[] data;
+    private final Object[] data;
     /** 队列的长度 */
-    private int queueLength;
+    private final int queueLength;
     /** 队头的位置 */
     private int head;
     /** 队尾的位置 */
