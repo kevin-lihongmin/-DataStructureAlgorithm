@@ -36,10 +36,14 @@ public class QuickSort {
     }
 
     private static int partition(int[] array, int left, int right) {
+        // 获取区分点的值
         int pivot = array[right];
+        // 用i记录区分点值pivot，最后真正应该去的下标位置
         int i = left;
+        // 从范围内，左到右遍历
         for (int j = left; j < right; j++) {
             if (array[j] < pivot) {
+                // 说明当前只就该在自己位置上老实呆着，将i的值叠加继续下一个判断
                 if (i == j) {
                     i++;
                 } else {
@@ -49,7 +53,7 @@ public class QuickSort {
                 }
             }
         }
-
+        //
         int tmp = array[i];
         array[i] = array[right];
         array[right] = tmp;
