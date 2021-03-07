@@ -47,7 +47,7 @@ public class HeapSort {
      * @param i 需要交换的下标 1
      * @param k 需要交换的下标 2
      */
-    private static void swap(int[] array, int i, int k) {
+    public static void swap(int[] array, int i, int k) {
         int tmp = array[i];
         array[i] = array[k];
         array[k] = tmp;
